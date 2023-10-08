@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="761.0" prefWidth="1363.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assign2_dsa2_dbp_jc.MainController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="1363.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Debugging">
+            <items>
+              <MenuItem fx:id="printStationsByIdButton" mnemonicParsing="false" onAction="#printStationsById" text="Print StationsById" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ListView fx:id="pathList" layoutX="942.0" layoutY="36.0" prefHeight="716.0" prefWidth="407.0" />
+      <Label layoutX="46.0" layoutY="562.0" text="Start Station" />
+      <Label layoutX="173.0" layoutY="562.0" prefHeight="17.0" prefWidth="109.0" text="Destination Station" />
+      <ImageView fx:id="zone1Image" fitHeight="528.0" fitWidth="926.0" layoutX="9.0" layoutY="34.0" onMouseClicked="#getMousePos" pickOnBounds="true" />
+      <AnchorPane fx:id="drawingPane" layoutX="9.0" layoutY="34.0" prefHeight="528.0" prefWidth="926.0" />
+      <ChoiceBox fx:id="destNodeCB" layoutX="161.0" layoutY="581.0" prefHeight="25.0" prefWidth="140.0" />
+      <ChoiceBox fx:id="startNodeCB" layoutX="14.0" layoutY="581.0" prefHeight="25.0" prefWidth="140.0" />
+      <Button fx:id="wpTest" layoutX="14.0" layoutY="613.0" mnemonicParsing="false" onAction="#traverseUsingWaypoints" prefHeight="62.0" prefWidth="287.0" text="Traverse with Waypoints" />
+      <ChoiceBox fx:id="traverseMode" layoutX="751.0" layoutY="581.0" prefHeight="25.0" prefWidth="163.0" />
+      <ChoiceBox fx:id="waypointCB" layoutX="311.0" layoutY="581.0" prefHeight="25.0" prefWidth="148.0" />
+      <Label layoutX="380.0" layoutY="562.0" text="Waypoints" />
+      <ChoiceBox fx:id="stationToAvoidCB" layoutX="528.0" layoutY="581.0" prefHeight="25.0" prefWidth="148.0" />
+      <Label layoutX="583.0" layoutY="562.0" text="Station to Avoid" />
+      <Button fx:id="addWaypoints" layoutX="465.0" layoutY="581.0" mnemonicParsing="false" onAction="#populateWaypointListView" prefHeight="25.0" prefWidth="41.0" text="Add" />
+      <Button fx:id="addAvoidNodes" layoutX="682.0" layoutY="581.0" mnemonicParsing="false" onAction="#populateAvoidListView" prefHeight="25.0" prefWidth="41.0" text="Add" />
+      <ListView fx:id="waypointsListView" layoutX="311.0" layoutY="610.0" prefHeight="140.0" prefWidth="195.0" />
+      <ListView fx:id="avoidListView" layoutX="528.0" layoutY="610.0" prefHeight="140.0" prefWidth="195.0" />
+      <Button fx:id="clearInfo" layoutX="14.0" layoutY="688.0" mnemonicParsing="false" onAction="#clearListviews" prefHeight="62.0" prefWidth="287.0" text="Clear " />
+      <Label layoutX="792.0" layoutY="562.0" text="Search Method" />
+   </children>
+</AnchorPane>
